@@ -11,7 +11,7 @@ h1 {
   padding: 20px;
   max-width: 600px;
   margin: 30px auto;
-  border: 1px solid #174ab9;
+  border: 1px solid #7792ce;
   border-radius: 5px;
   background-image: url("../images/clouds.jpg");
   font-weight: bold;
@@ -22,4 +22,16 @@ small {
   max-width: 600px;
   margin: 30px auto;
   font-weight: bold;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(19, 19, 63);
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+.weather-forecast-temperatures {
+  font-size: 15px;
 }

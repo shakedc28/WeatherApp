@@ -7,8 +7,7 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let day = date.getDay();
-  let daysOfTheWeek = [
+  let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -17,9 +16,38 @@ function formatDate(date) {
     "Friday",
     "Saturday"
   ];
-  let days = daysOfTheWeek[day];
-  return `${days}, ${hours}:${minutes}`;
+  let day = days[date.getDay()];
+  return `${day}, ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Teu"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+         <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-number"> 18° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let newTemp = document.querySelector("#temp");
@@ -52,3 +80,4 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 searchCity("Prague");
+displayForecast();

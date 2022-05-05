@@ -12,75 +12,42 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <div class="container">
-    <form id="search-form">
-      <input type="text"
-      placeholder="Enter a city"
-      id ="city-input"/>
-      <input type="submit" value="Search" />
-    </form>
-    <br/>
-    <h1 id=city></h1>
-    <span class="time" id="date"></span>
-    <h2><img src="" alt="clear" id="icon"/> <span id="temp"></span>°C</h2>
-    <div class="row">
-<div class="col-2.5">
-Humidity (<span id="humidity"></span> %)
-</div>
-<div class="col-2.5">
-Wind (<span id="wind"></span> km/h)
-</div>
-</div>
-<br/>
-    <div id="weather-forecast">
-    <div class="row">
-        <div class="col-2">
-            Tue
-            <br/>
-            <img src="" alt="" width="36"/>19°C
-        </div>
-        <div class="col-2">
-          Wed
-          <br/>
-          <img src="" alt="" width="36"/>19°C
+      <form id="search-form">
+        <input type="text" placeholder="Enter a city" id="city-input" />
+        <input type="submit" value="Search" />
+      </form>
+      <br />
+      <h1 id="city"></h1>
+      <span class="time" id="date"></span>
+      <h2><img src="" alt="clear" width="64" id="icon" /> <span id="temp"></span>°c</h2>
+      <div class="row">
+        <div class="col-2.5">Humidity (<span id="humidity"></span> %)</div>
+        <div class="col-2.5">Wind (<span id="wind"></span> km/h)</div>
       </div>
-      <div class="col-2">
-        Thu
-        <br/>
-        <img src="" alt="" width="36"/>19°C
-    </div>
-    <div class="col-2">
-Fri
-<br/>
-<img src="" alt="" width="36"/>19°C
-  </div>
-  <div class="col-2">
-      Sat
-      <br/>
-      <img src="" alt="" width="36"/>19°C
+      <div class="weather-forecast" id="forecast"></div>
       </div>
-      <div class="col-2">
-          Sun
-          <br/>
-          <img src="" alt="" width="36"/>19°C
-          </div>
-          </div>
-  </div>
-  </div>
-    <small>
-      <a href="https://github.com/shakedc28/WeatherApp.git" target="_blank">
-        Open-source code</a>
+      <small>
+        <a href="https://github.com/shakedc28/WeatherApp.git" target="_blank">
+          Open-source code</a
+        >
         by Shaked Cohen
-    </small>
+      </small>
     </div>
     <script src="src/index.js"></script>
   </body>
