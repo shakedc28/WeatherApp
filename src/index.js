@@ -45,7 +45,12 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+}
+
+function getForecast(coordinates){
+   let apiKey = "9fe17c642cc0070bb82d2e41284f583f";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeather(response) {
@@ -61,6 +66,8 @@ function displayWeather(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  getForecast (response.data.coord);
 }
 function searchCity(city) {
   let apiKey = "9fe17c642cc0070bb82d2e41284f583f";

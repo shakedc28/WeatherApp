@@ -1,9 +1,14 @@
 body {
   font-family: "Cinzel", serif;
+  color: rgb(19, 19, 63);
 }
 
 h1 {
-  color: black;
+  font-weight: 400;
+}
+
+.temp {
+  font-size: 20px;
 }
 
 .container {
@@ -27,6 +32,8 @@ small {
   margin-top: 20px;
   text-align: center;
   color: rgb(19, 19, 63);
+  border: 1px solid rgb(43, 43, 145);
+  border-radius: 10px;
 }
 
 .weather-forecast-date {
